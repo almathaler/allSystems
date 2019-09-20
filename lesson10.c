@@ -34,6 +34,9 @@ int main(){
     printf("comparing almaArray (almaalma) and almaCopy (alma) : %d \n", strcmp(alma, copyAlma));
     //
     printf("strchr: \n");
-
+    char *l = strchr(copyAlma, 'l');
+    char *lC = strchr(almaArray, 'l');
+    printf("the first instance of 'l' in the almaCopy: %s \n", l);
+    printf("the first instance of 'l' in almaArray: %s \n", lC);
   return 0;
 }
