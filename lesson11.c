@@ -1,25 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
+int ARR_SIZE = 10;
 
-int averageArray(int arr[]){
-  int size = 0;
-  int sum = 0;
-  while(arr[size] != NULL){
-    sum+=arr[size];
-    size++;
+double averageArray(int arr[]){
+  double sum = 0;
+  double avg = 0;
+  int y;
+  for (y=0; y<ARR_SIZE; y++){
+    sum+=arr[y];
   }
-  printf("size: %d \n", size);
-  printf("sum: %d \n", sum);
-  return sum / size;
+  avg = (sum / ARR_SIZE);
+  return avg;
 }
 
 int main(){
-  int array10[10];
+  int array[ARR_SIZE];
+  //int y;
   int y;
-  for (y=0; y<10; y++){
-    array10[y] = y;
+  for (y=0; y<ARR_SIZE; y++){
+    array[y] = y;
+    printf("just added %d \n", y);
   }
-  int avg = averageArray(array10);
-  printf("avg: %d \n", avg);
+  double avg = averageArray(array);
+  printf("avg: %f \n", avg);
   return 0;
 }
