@@ -23,6 +23,7 @@ int copyArray(int *arr, int *arr2){
 
 int main(){
   //1
+  printf("making array1 \n");
   int array[ARR_SIZE];
   int y;
   for (y=0; y<ARR_SIZE; y++){
@@ -32,14 +33,20 @@ int main(){
   double avg = averageArray(array);
   printf("avg: %f \n", avg);\
   //2
+  printf("\nmaking array2: \n");
   int array2[ARR_SIZE];
   for (y=0; y<ARR_SIZE; y++){
-    array[y] = (10-y);
-    printf("just added %d \n", y);
+    int toAdd = 10 - y;
+    array[y] = toAdd;
+    printf("just added %d \n", toAdd);
   }
-  int *arr = array[];
-  int *arr2 = array2[];
-  copyArray(*arr, *arr2);
+  int *arr = array;
+  int *arr2 = array2;
+  copyArray(arr, arr2);
+  printf("Here is what arr2 looks like now: \n");
+  for (y=0; y<ARR_SIZE; y++){
+    printf("here is arr2[%d]\n", y);
+  }
 
   return 0;
 }
