@@ -21,6 +21,15 @@ int copyArray(int *arr, int *arr2){
   return 0;
 }
 
+int lengthOfString(char *s){
+  int length = 0;
+  while (*s != NULL){
+    length++;
+    s++;
+  }
+  return length;
+}
+
 int main(){
   //1
   printf("making array1 \n");
@@ -47,6 +56,10 @@ int main(){
   for (y=0; y<ARR_SIZE; y++){
     printf("here is arr2[%d]\n", y);
   }
-
+  //3
+  char s[] = "alma";
+  char *sP = s;
+  int lengthS = lengthOfString(sP);
+  printf("\nthe length of 'alma' is: %d \n", lengthS);
   return 0;
 }
